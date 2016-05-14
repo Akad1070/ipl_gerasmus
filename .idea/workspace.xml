@@ -2,228 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0ecaa51-d9ce-4393-9a18-1669b8ed0e5a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-codec-1.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-dbcp2-2.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-pool2-2.4.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/genson-1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jBCrypt-0.4.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jackson-annotations-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jackson-core-2.1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jackson-databind-2.0.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-http-9.3.2.v20150730.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-io-9.3.2.v20150730.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-security-9.3.2.v20150730.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-server-9.3.2.v20150730.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-servlet-9.3.2.v20150730.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-util-9.3.2.v20150730.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-webapp-9.3.2.v20150730.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jetty-xml-9.3.2.v20150730.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jwt.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/postgresql-9.3-1102.jdbc41.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/servlet-api-3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/avatar.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/avatar.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/gerasmus_icone.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/gerasmus_logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/header-profile.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gerasmus.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/inspinia.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gerasmus/Base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gerasmus/Mobilite.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gerasmus/Partenaire.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gerasmus/Quidam.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gerasmus/Recherche.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gerasmus/User.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gerasmus/_core.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gerasmus/_main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/inspinia.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-ui.custom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/layout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/accueil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/completerInfo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/e404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/mobilite_ajout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/mobilite_details.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/mobilite_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/partenaire_ajout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/partenaire_details.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/partenaire_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/profil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/recherche_all.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/recherche_mobi.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/recherche_partenaire.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/etud/recherche_user.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/menus/etud.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/menus/prof.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/menus/quidam.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/accueil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/completerInfo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/e404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/mobilite_ajout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/mobilite_details.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/mobilite_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/partenaire_ajout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/partenaire_details.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/partenaire_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/profil.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/recherche_all.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/recherche_mobi.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/recherche_partenaire.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/prof/recherche_user.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/quidam/connexion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/partials/quidam/inscription.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.2.mine" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.4" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.6" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.mine" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.r402" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.r404" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.r433" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.log.r434" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/app.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/dev.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/eclipse-java-google-style.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/init.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/insert.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/prod.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ressources/test.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/AppContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/CrashListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/CrashWriter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/config/AppConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/exceptions/AppException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/exceptions/BizzException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/exceptions/DalException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/exceptions/FatalException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/exceptions/ForbiddenActionException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/exceptions/UnknownActionException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core/injecteur/InjecteurDependance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/AnnulationDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/ChoixMobiliteDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/DaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/DemandeMobiliteDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/DepartementDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/DocumentDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/LogicielDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/PartenaireDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/PaysDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/ProgrammeDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/TypeProgrammeDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/UserDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/UserInfoDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/core/DaoFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/core/DaoFactoryImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/core/DbEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/core/DbEntityColumn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/core/DbEntityColumnTransient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/core/DbEntityFk.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/core/DbEntityPk.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/AnnulationDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/ChoixMobiliteDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/Dao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/DemandeMobiliteDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/DepartementDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/DocumentDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/LogicielDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/PartenaireDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/PaysDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/ProgrammeDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/TypeProgrammeDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/UserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/interfaces/UserInfoDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockAnnulationDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockChoixMobiliteDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockDemandeMobiliteDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockDepartementDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockDocumentDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockLogicielDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockPartenaireDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockPaysDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockProgrammeDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockTypeProgrammeDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockUserDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/dao/mocks/MockUserInfoDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/service/DalBackendService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/service/DalService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/service/DalServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dal/service/MockDalServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/Annulation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/BaseEntiteImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/ChoixMobilite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/DemandeMobilite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/Departement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/Document.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/Logiciel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/Partenaire.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/Pays.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/Programme.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/TypeProgramme.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/UserInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/AnnulationBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/BaseEntite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/ChoixMobiliteBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/DemandeMobiliteBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/DepartementBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/DocumentBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/LogicielBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/PartenaireBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/PaysBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/ProgrammeBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/TypeProgrammeBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/UserBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/bizz/interfaces/UserInfoBizz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/AnnulationDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/ChoixMobiliteDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/DemandeMobiliteDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/DepartementDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/DocumentDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/LogicielDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/PartenaireDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/PaysDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/ProgrammeDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/TypeProgrammeDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/UserDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/dto/UserInfoDto.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/factory/EntiteFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/factory/EntiteFactoryImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/factory/MockEntiteFactoryImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/ucc/EtudiantUccImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/ucc/ProfesseurUccImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/ucc/QuidamUccImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/ucc/interfaces/EtudiantUcc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/ucc/interfaces/ProfesseurUcc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/domaine/ucc/interfaces/QuidamUcc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ihm/AppServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ihm/BaseServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ihm/JwtManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ihm/SessionManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/AppUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/domaine/bizz/AnnulationTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/domaine/bizz/DocumentTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/domaine/bizz/UserTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/domaine/factory/EntiteFactoryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/domaine/ucc/EtudiantUccTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/domaine/ucc/ProfesseurUccTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/domaine/ucc/QuidamUccTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gerasmus.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -242,12 +27,33 @@
   <component name="FavoritesManager">
     <favorites_list name="gerasmus" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -316,11 +122,53 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -346,6 +194,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -367,12 +231,115 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="gerasmus" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -403,6 +370,72 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -420,12 +453,12 @@
       <option name="presentableId" value="Default" />
       <updated>1463259547274</updated>
       <workItem from="1463259552768" duration="44000" />
-      <workItem from="1463263817249" duration="401000" />
+      <workItem from="1463263817249" duration="887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445000" />
+    <option name="totallyTimeSpent" value="931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1912" height="1052" extended-state="0" />
@@ -436,7 +469,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3301179" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25267667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -461,5 +494,23 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/contributors.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
