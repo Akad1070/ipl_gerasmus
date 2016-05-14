@@ -1,0 +1,156 @@
+
+<div class="row animated fadeIn"
+data-vue="mobilite" data-action="ajout" data-titre-vue="Introduire une demande"
+data-icone="fa fa-rocket"  style="display:none;">
+
+
+<!-- Modal pour confirmer ajouter de choix -->
+<div class="modal fade" id="modal_confirm_ajouter_choix"  tabindex="-1"  role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Confirmation de l'ajout</h4>
+			</div>
+			<div class="modal-body">
+				<p>Tous vos choix ci-intoduits seront tous pris en compte et enregistrés</p>
+				<p>L'introduction d'une demande de mobilité ne s'effectue qu'une seule fois. <br>
+					La demande ne pourra pas être modifié, seulement annulable ou confirmer si manque le partenaire.</p>
+					<p><b>Veuillez verifier vos choix avant de confirmer.</b></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
+					<a class="btn btn-primary" data-dismiss="modal" href="#/mobilite/ajouter" id="btn_choix_ajouter_ok">Confirmer</a>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+	<!-- Modal pour confirmer suppression de choix -->
+	<div class="modal fade" id="modal_confirm_supp_choix"  tabindex="-1"  role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="close-link pull-right " data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></a>
+					<h4 class="modal-title">Confirmation de la suppression du choix de mobilite</h4>
+				</div>
+				<div class="modal-body">
+					<p>Cet action est irreversible.</p>
+					<p><b>Voulez-vous vraiment supprimer cette mobilite ? </b></p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" id="btn_supp_choix_ok">Confirmer</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+	<div class="col-lg-8 col-lg-offset-2 sortable" id="mobi-choix-sortable">
+
+		<div class="row">
+			<div class="col-md-3 pull-right">
+				<a class="btn btn-primary pull-right btn-choix-ajouter">Terminer</a>
+			</div>
+
+			<div class="col-md-3 pull-left">
+				<a  class="btn btn-white btn-plus-choix-mobi pull-left">
+					<i class="fa fa-plus"></i> Choix
+				</a>
+			</div>
+
+			<div class="col-md-3">
+				<a class="btn btn-info" href="#/partenaire/ajout">
+					<i class="fa fa-plus"></i> Ajouter partenaire
+				</a>
+			</div>
+
+		</div>
+
+			<br>
+
+
+		<div class="row">
+			<div class="ibox choix">
+				<form role="form" class="form">
+					<div class="ibox-title">
+						<div class="row">
+							<div class="col-sm-5"><h5>Choix de mobilite pour l'année </h5></div>
+							<div class="col-sm-3">
+								<select name="annee_academique" title="Année académique">
+								</select>
+							</div>
+							<div class="col-sm-1 pull-right">
+								<a class="close-link pull-right" title="Supprimer ce choix">
+									<i class="fa fa-times"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="ibox-content">
+						<div class="row">
+							<div class="form-group">
+								<label  class="col-sm-5 control-label" for="mobi_proga">Programme </label>
+								<div class="col-sm-7">
+									<select id="mobi_proga" name="programme"></select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label  class="col-sm-5 control-label" for="mobi_type_orga">Type de programme</label>
+								<div class="col-sm-7">
+									<select id="mobi_type_orga" name="type_programme"></select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-5 control-label" for="pat_autre_pays">Quadrimestre </label>
+								<div class="col-sm-7">
+									<select name="quadrimestre" required>
+										<option value="1">1er</option>
+										<option value="2">2ème</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label  class="col-sm-5 control-label" >Partenaire </label>
+								<div class="col-sm-7">
+									<select name="partenaire"></select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-5 control-label" for="pat_pays">Localite </label>
+								<div class="col-sm-7">
+									<select	id="pat_pays" class="form-control m-a" name="pays"></select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-3 pull-right">
+				<a class="btn btn-primary pull-right btn-choix-ajouter">Terminer</a>
+			</div>
+
+			<div class="col-md-3 pull-left">
+				<a  class="btn btn-white btn-plus-choix-mobi pull-left">
+					<i class="fa fa-plus"></i> Choix
+				</a>
+			</div>
+
+			<div class="col-md-3">
+				<a class="btn btn-info" href="#/partenaire/ajout">
+					<i class="fa fa-plus"></i> Ajouter partenaire
+				</a>
+			</div>
+		</div>
+
+	</div>

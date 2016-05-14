@@ -1,0 +1,69 @@
+
+<div class="row animated fadeIn" data-action="inscription" data-vue="quidam" data-titre-vue="S'inscrire" data-icone="fa fa-user-plus"  style="display:none;">
+	<div class="col-md-4 col-md-offset-4">
+		<div class="panel login-panel panel-primary">
+			<div class="panel-heading">
+				<h3 class="panel-title">Inscription</h3>
+			</div>
+			<form role="form">
+				<div class="panel-body">
+
+					<div class="form-group">
+						<label for="nom"> Nom : </label>
+						<p class="erreur"> </p>
+						<input class="form-control" id="nom" required autofocus=true name="nom" placeholder="Introduisez votre nom" type="text">
+					</div>
+
+					<div class="form-group">
+						<label for="prenom">Prénom : </label>
+						<p class="erreur"> </p>
+						<input class="form-control" id="prenom" required name="prenom" placeholder="Introduisez votre prenom" type="text">
+					</div>
+
+					<div class="form-group">
+						<label for="mail">E-mail (Haute-École) : </label>
+						<p class="erreur"> </p>
+						<input class="form-control" id="mail" required name="mail" placeholder="Introduisez votre e-mail" type="email">
+					</div>
+
+					<div class="form-group">
+						<label for="departement">Departement :</label>
+						<br>
+						<select name="departements_ipl"></select>
+					</div>
+
+					<hr class="line-dashed">
+
+
+					<div class="form-group">
+						<label for="pseudo">Pseudo : </label>
+						<p class="erreur"> </p>
+						<input class="form-control" id="pseudo" required name="pseudo" placeholder="Introduisez votre pseudo" type="text">
+					</div>
+
+
+					<div class="form-group">
+						<label for="insc_mdp">Mot de passe : </label>
+						<p class="erreur"> </p>
+						<input class="form-control" id="insc_mdp"
+						required
+						name="mdp" placeholder="Introduisez votre mot de passe" type="password">
+					</div>
+
+					<div class="form-group">
+						<label for="inscr_mdp2">Confirmer votre mot de passe : </label>
+						<p class="erreur"> </p>
+						<input class="form-control" id="incr_mdp2"
+						required
+						name="mdp2" placeholder="Reintroduisez votre mot de passe" type="password">
+					</div>
+
+				</div>
+				<div class="panel-footer">
+					<a href="#inscrire" class="btn btn-lg btn-info btn-block btn-inscrire"  data-action >S'inscrire</a>
+				</div>
+			</form>
+		</div>
+
+	</div>
+</div>

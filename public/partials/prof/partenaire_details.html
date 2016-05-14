@@ -1,0 +1,102 @@
+
+<div class="row" data-vue="partenaire"  data-action="details" data-titre-vue="Details sur partenaire" data-icone="fa fa-building"  style="display:none;">
+
+	<!-- Modal pour confirmer cacher cet partenaire -->
+	<div class="modal fade" id="modal_confirm_mask_pat"  tabindex="-1"  role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="close-link pull-right " data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></a>
+					<h4 class="modal-title">Confirmation du masquage du partenaire</h4>
+				</div>
+				<div class="modal-body">
+					<p><b>Voulez-vous vraiment supprimer cette mobilite ? </b></p>
+					<p>Cet action est reversible. Lors de l'ajout d'un nouveau partenaire dont le nom correspondrait à celui, ce partenaire sera sélectionnée à la place.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" id="btn_mask_pat_ok">Confirmer</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+		<div class="col-md-6 col-md-offset-3 text-left">
+			<div class="widget lazur-bg p-xl ">
+					<a class="btn btn-md btn-warning pull-right btn-maj-part-visible" title="Changer visibilité">
+						<i class="fa fa-eye-slash"></i>
+					</a>
+				<h2 class="font-bold no-marginsn pat-nom"></h2>
+
+				<ul class="list-unstyled m-t-md">
+					<li>
+						<span class="fa fa-building"></span>
+						<label>Type : </label>
+						<span class="pat-type"></span>
+					</li>
+					<li>
+						<label>Département(s) : </label>
+						<div class="pat-departements">
+						</div>
+					</li>
+					<li>
+						<span class="fa fa-at"></span>
+						<label>E-mail : </label>
+						<span class="pat-mail"></span>
+					</li>
+					<li>
+						<span class="fa fa-home"></span>
+						<label>Adresse : </label>
+						<span class="pat-adresse"></span>&nbsp;&nbsp;<span class="pat-region"></span>
+					</li>
+					<li>
+						<span class="fa fa-map-marker"></span>
+						<label>Ville : </label>
+						<span class="pat-ville"></span>&nbsp;(<span class="pat-pays"></span>)
+					</li>
+
+
+					<li>
+						<span class="fa fa-phone"></span>
+						<label>Telephone : </label>
+						<span class="pat-tel"></span>
+					</li>
+					<li>
+						<span class="fa fa-info"></span>
+						<label>Site web : </label>
+						<a target="_blank" class="pat-site-web">Lien vers leur site WEB</a>
+					</li>
+					<li class="pat-elligible">
+						<span class="fa fa-user"></span>
+						<label>Createur :</label>
+						<a class="pat-createur">Createur</a>
+					</li>
+				</ul>
+
+				<a class="btn btn-md btn-primary pull-left btn-maj-part" title="Modifier ce partenaire"><i class="fa fa-pencil"></i></a>
+
+
+
+			</div>
+
+<!-- 			<div class="widget-text-box">
+	<h4 class="media-heading text-center">Actions</h4>
+	<div>
+	</div>
+</div> -->
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+</div>

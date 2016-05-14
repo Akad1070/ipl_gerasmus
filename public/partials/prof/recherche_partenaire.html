@@ -1,0 +1,57 @@
+
+<div class="row nestable" data-vue="recherche"  data-action="partenaire" data-titre-vue="Rechercher sur partenaire" data-icone="fa fa-search"  style="display:none;">
+	<div class="col-lg-12">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h2 class="text-center">
+					<span class="search-nb-result">0</span> resultat(s) pour : “ <span class="search-obj text-navy"></span> ”
+					<hr>
+				</h2>
+
+				<label class="search_erreur"></label>
+
+				<div class="row search-options" >
+					<form role="search">
+						<div class="row">
+							<div class="form-group col-md-3 col-md-offset-1 text-center">
+								<label class="control-label">Nom</label>
+								<input type="text" placeholder="Le nom du partenaire" name="nom_legal" class="form-control search-pat-nom" />
+							</div>
+
+							<div class="form-group col-md-3 text-center">
+								<label class="control-label" >Pays</label>
+								<!-- <select	id="pat_pays" class="form-control m-a" name="pays"></select> -->
+								<input type="text" placeholder="Le pays du partenaire" name="pays" class="form-control  search-pat-pays" />
+							</div>
+
+							<div class="form-group col-md-3 text-center">
+								<label class="control-label" >Ville</label>
+								<input type="text" placeholder="La ville du partenaire" name="ville" class="form-control  search-pat-ville" />
+							</div>
+
+							<div class="form-group col-md-1">
+								<a class="btn btn-lg btn-primary dim btn-large-dim pull-right btn-search"  >
+									<i class="fa fa-search"></i>
+								</a>
+							</div>
+
+						</div>
+
+					</form>
+
+				</div>
+
+
+			</div>
+
+
+			<br>
+
+
+			<div class="ibox-content">
+				<div class="row search-result"></div>
+			</div><!--  IBoc Content -->
+
+		</div> <!-- IBox -->
+	</div>
+</div> <!-- Row -->

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge;charset=ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Gerasmus, Gestionnaire de Mobilités pour IPL">
+	<meta name="author" content="PAE04 - On vise le 18">
+
+	<title>AppGerasmus</title>
+	<link rel="icon" href="img/gerasmus_icone.jpg">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.1/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.4.3/metisMenu.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/templates/pace-theme-flash.tmpl.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.0/awesomplete.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/2.0.3/css/footable.core.min.css">
+
+	<link rel="stylesheet" href="css/inspinia.css">
+
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<style type="text/css">
+		body {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select:none;
+			user-select:none;
+			-o-user-select:none;
+			font-size: 14px;
+		}
+		.login-panel{	margin-top: 5%;}
+		.erreur{		color: #B03535;	}
+
+	</style>
+</head>
+
+<body unselectable="on" onselectstart="return false;">
+
+
+
+
+
+<div id="wrapper">
+
+	<!-- Ici commence la barre de menu latéral -->
+	<nav class="menu-lateral navbar-default navbar-static-side" role="navigation">
+	</nav>
+
+	<div id="page-wrapper" class="gray-bg">
+		<!-- Ici commence la barre fixe tout en haut de la page -->
+		<div class="row border-bottom topbar">
+			<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+				<div class="navbar-header">
+					<a class="navbar-minimalize minimalize-styl-2 btn btn-primary"><i class="fa fa-bars"></i> </a>
+				</div>
+				<ul class="nav navbar-top-links navbar-right">
+					<li>
+						<span class="m-r-sm text-muted ">Bonjour <span class='user-prenom'>User.prenom</span>, <span class='user-nom'>User.nom</span></span>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle user-mail" data-toggle="dropdown">user@mail.dom</a>
+
+						<ul class="dropdown-menu m-t-xs">
+							<li><a class="user-dep">Sexion D'Assaut</a> </li>
+							<li class="divider"></li>
+							<li><a href="#profil"><i class="fa fa-user"> </i> Profil </a></li>
+							<li><a href="#/mobilite/list"><i class="fa fa-rocket"> </i> Mobilites</a></li>
+							<li class="divider"></li>
+							<li><a href="#out"><i class="fa fa-sign-out"> </i> Se déconnecter</a> </li>
+						</ul>
+
+					</li>
+
+				</ul>
+
+			</nav>
+		</div>
+		<!-- La barre fixe tout en haut -->
+
+
+		<!-- Ici commence la barre qui sert de navigation pour savoir ou on est. -->
+		<div class="row wrapper border-bottom white-bg page-heading">
+			<div class="col-lg-9">
+				<h2 class="vue_actu_titre">Accueil</h2>
+				<ol class="breadcrumb">
+
+				</ol>
+			</div>
+		</div>
+		<!-- La barre qui sert de navigation pour savoir ou on est. -->
+
+
+		<!-- Modal Start here-->
+		<!-- 	<div class="modal fade modal-req-loader" tabindex="-1"
+		role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						<i class="fa fa-cog fa-spin fa-4x">
+						</i>Veuillez patienter ...
+					</h4>
+				</div>
+				<div class="modal-body">
+				  -->
+		<div class="windows8 req-spinner" style="display: none;">
+			<div class="wBall" id="wBall_1">
+				<div class="wInnerBall"></div>
+			</div>
+			<div class="wBall" id="wBall_2">
+				<div class="wInnerBall"></div>
+			</div>
+			<div class="wBall" id="wBall_3">
+				<div class="wInnerBall"></div>
+			</div>
+			<div class="wBall" id="wBall_4">
+				<div class="wInnerBall"></div>
+			</div>
+			<div class="wBall" id="wBall_5">
+				<div class="wInnerBall"></div>
+			</div>
+		</div>
+		<!--
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+		<!-- Modal ends Here -->
+
+
+
+
+
+
+
+
+
+
+		<!-- Pour le contenu de la page hormis les headers -->
+		<div class="wrapper wrapper-content">
+
+		</div>
+		<!-- Pour le contenu de la page hormis les headers -->
+
+	</div> <!-- .page-wrapper -->
+
+</div><!-- #wrapper juste après le <body> -->
+
+
+
+
+
+
+
+
+<!-- Scripts Externes -->
+
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+
+<script src="js/jquery-ui.custom.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.4.3/metisMenu.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js" ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js" ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/2.0.3/js/footable.all.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.0/awesomplete.min.js"></script>
+
+
+
+<!-- Custom javascript -->
+
+<script src="js/inspinia.js" defer></script>
+
+
+<script type="text/javascript" defer>
+	toastr.options = {
+		"closeButton": true,
+		"debug": false,
+		"newestOnTop": true,
+		"progressBar": true,
+		"positionClass": "toast-bottom-right",
+		"preventDuplicates": true,
+		"onclick": null,
+		"showDuration": "300",
+		"hideDuration": "1000",
+		"timeOut": "5000",
+		"extendedTimeOut": "2000",
+		"showEasing": "swing",
+		"hideEasing": "linear",
+		"showMethod": "fadeIn",
+		"hideMethod": "fadeOut"
+	}
+
+
+
+</script>
+
+<!-- Scripts Externes -->
+
+
+
+<!-- Scripts Propres à Gerasmus -->
+
+<!-- Core - Gerasmus  -->
+<script src="js/gerasmus/_core.js"></script>
+
+
+<!-- BaseVue -->
+<script src="js/gerasmus/Base.js"></script>
+
+<script src="js/gerasmus/Quidam.js"></script>
+
+<script src="js/gerasmus/User.js"></script>
+
+<script src="js/gerasmus/Recherche.js"></script>
+
+<script src="js/gerasmus/Partenaire.js"></script>
+
+<script src="js/gerasmus/Mobilite.js"></script>
+
+
+
+<script src="js/gerasmus/_main.js"></script>
+
+
+
+</body>
+</html>

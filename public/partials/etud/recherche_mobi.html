@@ -1,0 +1,93 @@
+
+<div class="row nestable" data-vue="recherche" data-action="mobilite" data-titre-vue="Rechercher sur mobilite" data-icone="fa fa-search"  style="display:none;">
+
+	<div class="col-lg-12">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h2 class="text-center">
+					<span class="search-nb-result">0</span> resultat(s) pour : “ <span class="search-obj text-navy"></span> ”
+					<hr>
+				</h2>
+
+				<label class="search_erreur"></label>
+
+				<div class="row search-options" >
+					<form role="search">
+						<div class="row">
+							<div class="form-group col-md-4 col-md-offset-1 text-center">
+								<label class="control-label">Année</label>
+								<select name="mobi_annee_academique"></select>
+							</div>
+
+							<div class="form-group col-md-4">
+								<label class="control-label" >Etat de mobilité</label>
+								<select name="mobi_etat"></select>
+							</div>
+
+							<div class="form-group col-md-1 col-md-offset-3 ">
+								<a class="btn btn-lg btn-primary dim btn-large-dim pull-right btn-search"  >
+									<i class="fa fa-search"></i>
+								</a>
+							</div>
+
+						</div>
+
+					</form>
+
+				</div>
+
+
+			</div>
+
+
+			<br>
+
+
+			<div class="ibox-content">
+				<div class="row">
+					<div class="form-group col-md-5 ">
+						<label for="search_user_nom" class="control-label">Filter sur </label>
+						<input type="text" class="form-control" id="search-filter-mobi"
+						placeholder="Filter le(s) résultat(s)">
+					</div>
+					<div class="form-group col-md-3">
+						<label  class="control-label">Departements</label>
+						<select	 id="search-filter-mobi-departement"  name="departements_ipl"></select>
+					</div>
+
+
+				</div>
+
+				<div class="hr-line-dashed"></div>
+
+				<table data-filtering="true"  data-filter-minimum="2" data-filter="#search-filter-mobi" data-page-size="10" class="footable table table-stripped ">
+					<thead>
+						<tr>
+							<th data-toggle="true">Pour</th>
+							<th>Etudiant</th>
+							<th>Département</th>
+							<th>Programme</th>
+							<th>Type</th>
+							<th>Chez</th>
+							<th>Etat</th>
+							<th data-hide="all">Actions</th>
+						</tr>
+					</thead>
+					<tbody class="search-mobi-result">
+
+
+					</tbody>
+					<tfoot class="hide-if-no-paging">
+						<tr>
+							<td colspan="5">
+								<ul class="pagination pagination-centered pull-right"></ul>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+
+			</div><!--  IBoc Content -->
+
+		</div> <!-- IBox -->
+	</div>
+</div> <!-- Row -->

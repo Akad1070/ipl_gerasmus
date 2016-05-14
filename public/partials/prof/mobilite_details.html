@@ -1,0 +1,65 @@
+
+<div class="row animated fadeIn" data-vue="mobilite" data-action="details" data-titre-vue="Details sur mobilités" data-icone="fa fa-rocket"  style="display:none;">
+
+	<!-- Modal pour tt actions de confirmation concernant cette mobilite -->
+	<div class="modal fade modal-maj-mobi"  tabindex="-1"  role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="close-link pull-right " data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></a>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body"></div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
+					<button type="button" class="btn btn-primary btn_mobi_maj_ok" data-dismiss="modal">Confirmer</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<!-- Modal pour confirmer suppression de cette mobilite -->
+	<div class="modal fade" id="modal_confirm_annul_mobi"  tabindex="-1"  role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<a class="close-link pull-right " data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></a>
+					<h4 class="modal-title">Confirmation de l'annulation de mobilite</h4>
+				</div>
+				<div class="modal-body">
+					<p>Veuillez selectionner un motif pour cet annulation</p>
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Motif : </label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" name="motif" required maxlength="375">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Selection</label>
+							<div class="col-sm-10">
+								<select class="form-control m-b" name="motif_input" required>	</select>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Retour</button>
+					<button type="button" class="btn btn-danger btn_mobi_annul_ok" data-dismiss="modal">Annuler</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+
+	<div class="col-lg-10 col-lg-offset-1 ">
+		<div class="row panel_mobi_details">
+
+		</div>
+	</div>
+
+</div>
+
+

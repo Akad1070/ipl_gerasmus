@@ -1,0 +1,88 @@
+
+<div class="row nestable" data-vue="recherche"  data-action="user" data-titre-vue="Rechercher sur utilisateur" data-icone="fa fa-search"  style="display:none;">
+	<div class="col-lg-12">
+		<div class="ibox float-e-margins">
+			<div class="ibox-title">
+				<h2 class="text-center">
+					<span class="search-user-nb-result">52 </span> resultat(s) pour : “ <span class="search-obj text-navy"></span> ”
+					<hr>
+				</h2>
+
+				<label class="search_erreur"></label>
+
+				<div class="row search-options" >
+					<form role="search">
+						<div class="row">
+							<div class="form-group col-md-4 col-md-offset-1 text-center">
+								<label class="control-label">Nom</label>
+								<input type="text" placeholder="Un nom pour l'utilisateur" name="nom" class="form-control search-user-nom" />
+							</div>
+
+							<div class="form-group col-md-4 text-center">
+								<label class="control-label" >Prenom</label>
+								<input type="text" placeholder="Le prénom de l'étudiant" name="prenom" class="form-control  search-user-prenom" />
+							</div>
+
+							<div class="form-group col-md-1 col-md-offset-1 ">
+								<a class="btn btn-lg btn-primary dim btn-large-dim pull-right btn-search"  >
+									<i class="fa fa-search"></i>
+								</a>
+							</div>
+
+						</div>
+
+					</form>
+
+				</div>
+
+
+			</div>
+
+
+			<br>
+
+
+			<div class="ibox-content">
+				<div class="row">
+					<div class="form-group col-md-5 ">
+						<label for="search_user_nom" class="control-label">Filter sur </label>
+						<input type="text" class="form-control" id="search-filter-user"
+						placeholder="Filter le(s) résultat(s)">
+					</div>
+					<div class="form-group col-md-3 text-center">
+						<label  class="control-label">Departements</label>
+						<select	 id="search-filter-user-departement"  name="departements_ipl"></select>
+					</div>
+
+
+				</div>
+
+				<div class="hr-line-dashed"></div>
+
+				<table data-filtering="true" data-filter="#search-filter-user" data-page-size="10" class="footable table table-stripped ">
+					<thead>
+						<tr>
+							<th>NOM,Prénom</th>
+							<th>Mail</th>
+							<th>Département</th>
+						</tr>
+					</thead>
+					<tbody class="search-user-result">
+
+					</tbody>
+					<tfoot class="hide-if-no-paging">
+						<tr>
+							<td colspan="5">
+								<ul class="pagination pagination-centered pull-right"></ul>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+
+			</div><!--  IBoc Content -->
+
+		</div> <!-- IBox -->
+	</div>
+</div> <!-- Row -->
+
+

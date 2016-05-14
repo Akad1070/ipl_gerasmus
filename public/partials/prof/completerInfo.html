@@ -1,0 +1,148 @@
+
+<div class="row nestable" data-vue="user" data-action="completer" data-titre-vue="Completer " data-icone="fa fa-university"  style="display:none;">
+
+	<div class="modal fade "  tabindex="-1"  role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="col-md-8 col-sm-10 col-lg-12">
+						<div class="panel login-panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Compléter informations</h3>
+							</div>
+							<div class="panel-body">
+								<form role="form" class="form-user-info">
+									<div class="form-group">
+										<label> Civilité : </label>
+										<select	class="info-civilite" name="civilite" >
+											<option value="Mme">Mme</option>
+											<option value="Mlle">Mlle</option>
+											<option value="Mr">Mr</option>
+										</select>
+									</div>
+
+
+									<div class="input-group m-b">
+										<!-- <div class="input-group m-b"> -->
+										<span class="input-group-addon">
+											<i class="fa fa-globe"></i>
+										</span>
+										<input class="form-control info-nation" required
+										name="nationalite"  readonly
+										placeholder="Introduisez votre nationalité" type="text">
+									</div>
+
+
+									<div class="input-group m-b">
+										<span class="input-group-addon">
+											<i class="fa fa-home"></i>
+										</span>
+										<input class="form-control info-adresse" required  readonly
+										name="adresse" placeholder="Introduisez votre adresse"
+										type="text">
+									</div>
+
+
+									<div class="input-group m-b">
+										<span class="input-group-addon">
+											<i class="fa fa-phone"></i>
+										</span>
+										<input class="form-control info-tel" required readonly
+										name="tel" placeholder="Introduisez votre numéro de téléphone"
+										data-mask="+99 99999999?9?9?9?9"
+										type="text">
+									</div>
+
+
+									<div class="input-group m-b">
+										<span class="input-group-addon">@</span>
+										<input class="form-control info-mail"  name="mail"  readonly
+										placeholder="Introduisez votre adresse e-mail personnel"
+										type="text">
+									</div>
+
+									<!-- radio bouton => sexe F M-->
+
+									<div class="form-group">
+										<label for="sexe"> Sexe: </label>
+										<input type="radio" name="sexe" value="M">M
+										<input type="radio" name="sexe" value="F" checked>F
+									</div>
+
+
+									<div class="input-group m-b">
+										<span class="input-group-addon">
+											<i class="fa fa-credit-card-alt"></i>
+										</span>
+										<input class="form-control info-bank" required  readonly
+										name="compte" placeholder="Introduisez votre numero de compte banquaire : BE22 2222 3333 4444" type="text">
+									</div>
+
+
+									<div class="form-group">
+										<div class="input-group m-b">
+											<span class="input-group-addon" for="info-bank-titu">
+												<i class="fa fa-user"></i>
+											</span>
+											<input class="form-control info-bank-titu" required
+											name="titulaire"  readonly
+											placeholder="Introduisez le titulaire du compte bancaire"
+											type="text">
+										</div>
+									</div>
+
+									<div class="input-group m-b">
+										<span class="input-group-addon">
+											<i class="fa fa-institution"></i>
+										</span>
+										<input class="form-control info-bank-nom" required  readonly
+										name="banque" placeholder="Introduisez le nom de la banque"
+										type="text">
+									</div>
+
+									<div class="form-group">
+										<label for="info-code_bic"> Code bic: </label>
+										<p class="erreur"></p>
+										<input class="form-control info-code_bic" required
+										name="bic"  readonly
+										placeholder="Introduisez le code bic du compte bancaire"
+										type="text">
+									</div>
+
+									<div class="input-group m-b">
+										<span class="input-group-addon">
+											<i class="fa fa-birthday-cake"></i>
+										</span>
+										<input class="form-control info-nais" required  readonly
+										name="nais" placeholder="votre date de naissance : JJ/MM/AAAA"
+										type="text">
+									</div>
+
+									<div class="form-group">
+										<label for="info-nb-reussi">Nombres d'années réussies: </label>
+										<p class="erreur"></p>
+										<input class="form-control info-nb-reussi" required
+										name="annee_reussie" min="0"  readonly
+										placeholder="Introduisez le nombre d'années réussie en supérieur."
+										type="number">
+									</div>
+
+									<br>
+									<a data-dismiss="modal" class="btn btn-lg btn-primary btn-block btn-user-info-completer btn-user-info-completer-ok">Completer</a>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" >Retour</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+
+</div>

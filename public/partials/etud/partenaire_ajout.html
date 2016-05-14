@@ -1,0 +1,157 @@
+
+<div class="row" data-vue="partenaire"  data-action="ajout" data-titre-vue="Ajout d'un partenaire" data-icone="fa fa-building" style="display:none;">
+
+	<div class="col-lg-12">
+		<div class="ibox float-e-margins white-bg">
+			<div class="ibox-title">
+				<h3 class="panel-title">Formulaire d'ajout d'un partenaire</h3>
+			</div>
+			<div class="ibox-content">
+				<form class="form-horizontal" role="form">
+					<div class="row">
+						<fieldset class="col-sm-6 ">
+							<div class="row">
+								<legend>Organisation</legend>
+
+								<div class="form-group">
+									<label  class="col-sm-4 control-label">Nom légal : </label>
+									<div class="col-sm-8">
+										<input class="form-control"	required autofocus=true
+										name="nom_legal" placeholder="Introduisez le nom légal"	type="text">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-4 control-label">Nom d'affaire : </label>
+									<div class="col-sm-8">
+										<input class="form-control" required
+										autofocus=true name="nom_affaire"
+										placeholder="Introduisez le nom d'affaire" type="text">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-4 control-label">Nom complet : </label>
+
+									<div class="col-sm-8">
+										<input class="form-control"
+										name="nom_complet" placeholder="Introduisez le nom complet"
+										type="text">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label  class="col-sm-4 control-label">Département chez Partenaire :  </label>
+									<div class="col-sm-8">
+										<input class="form-control"
+										name="departement" placeholder="Introduisez le departement du partenaire"	type="text">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label  class="col-sm-4 control-label" >Type : </label>
+									<p class="erreur"></p>
+									<div class="col-sm-8">
+										<select name="type_organisation"></select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label  class="col-sm-4 control-label" >Nombre d'employé(s): </label>
+									<div class="col-sm-8">
+										<input name="nb_employe" type="number" min='0'>
+									</div>
+								</div>
+
+							</div>
+						</fieldset>
+
+						<fieldset class="col-sm-6">
+							<div class="row">
+								<legend>Adresse</legend>
+								<div class="form-group">
+									<label class="col-sm-4 control-label" for="adresse">Adresse : </label>
+									<div class="col-sm-8">
+										<div class="row">
+											<span class="col-sm-8">
+												<input class="form-control" name="adresse"
+												placeholder="Introduisez l'adresse" type="text">
+											</span>
+											<span class="col-sm-4">
+												<input class="form-control" name="cp" placeholder="Code postal"	type="text">
+											</span>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="form-group">
+									<p class="erreur"></p>
+									<label class="col-sm-4 control-label" >Region : </label>
+									<div class="col-sm-8">
+										<input class="form-control" name="region" placeholder="Introduisez la région" type="text">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<p class="erreur"></p>
+									<label class="col-sm-4 control-label" >Ville : </label>
+									<div class="col-sm-8">
+										<input class="form-control" required name="ville" placeholder="Introduisez la ville" type="text">
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<label class="col-sm-4 control-label">Pays : </label>
+									<p class="erreur"></p>
+									<div class="col-sm-8">
+										<select	class="form-control m-a" name="pays"></select>
+									</div>
+								</div>
+
+
+							</div>
+
+						</fieldset>
+					</div>
+
+				<div class="hr-line-dashed"></div>
+
+					<div class="row">
+						<fieldset class="col-lg-12">
+							<legend>Contact</legend>
+							<div class="form-group">
+								<div class=" col-md-2">
+									<label class="control-label"> Info de contact : </label>
+								</div>
+
+								<div class="col-md-10">
+									<div class="row">
+										<div class="col-md-4">
+											<input type="email" class="form-control" required name="mail" placeholder="E-mail" >
+										</div>
+										<div class="col-md-4">
+											<input type="text" class="form-control" name="tel" placeholder="Telephone" data-mask="(99) 99 999 999" >
+										</div>
+										<div class="col-md-4">
+											<input type="url" class="form-control" name="site_web"	value="http://" placeholder="Site web" >
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</form>
+
+
+				<div class="hr-line-dashed"></div>
+
+				<a class="btn btn-lg btn-info btn-block btn-partenaire-ajouter" >Ajouter partenaire</a>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
