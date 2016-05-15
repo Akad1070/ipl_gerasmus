@@ -41,7 +41,7 @@ JavaScript
 J'avais pour idée de créer un petit 'framework' MVC pour etablir une base sur laquelle chacun pourrait contribuer au JS au lieu de laisser une seule personne en charge de cette partie.
 En fin de compte, ca ne s'est pas passée ainsi car personne dans le groupe n'avait réussi l'examen JS et avait des lacunes pour la compréhension du JS.
 
-Je vais présenter en gros les principales parties de ce 'framework'.
+Je vais présenter les principaux composants de ce 'framework'.
 
 
 _CORE.js :
