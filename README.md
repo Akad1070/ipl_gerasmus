@@ -38,81 +38,88 @@ Les actions de type "maj" requiert les nouveles data dans le 'input_data'.
 
 
 
-JavaScript
-==========
+# JavaScript
+
 
 Je vais présenter les principaux composants de ce 'mini-framework'.
 
 
-_CORE.js :
----------
-Regroupe les fonctionnalités du framework. Representé par le namespace 'Gerasmus'
+## _CORE.js
 
-### Router : Un syteme de router simple avec pris en charge de paramètre.
+**Regroupe les fonctionnalités du framework & representé par le namespace 'Gerasmus'**
+
+### Router
+**Un syteme de router simple avec pris en charge de paramètre et d'alias pour une route.**
+
     - Reconnaissance par RegExp de l'URL.
     - Ecoute les changements du #hash dans la barre d'adresse.
     - Redirection vers un route ne particulier.
     - Assignation d'alias pour un chemin : #inscription dirige vers #/quidam/inscription
 
 
-### Context :
-Pour retenir toutes les vues visibles actuellement par l'utilisateur, les différens msg affichables en cas d'erreur d'une reqAJAX sans message d'erreur envoyé, le nom de l'application et l'URL vers le serveur.
+### Context
+    - Le nom de l'application.
+    - URL vers le serveur.
+    - Toutes les vues visibles actuellement par l'utilisateur
 
 
 
-### Events : Pour gerer la communication entre les couches. Basée sur le pattern PubSub
+### Events
+
+Pour gerer la communication entre les couches. Basée sur le pattern PubSub
 
 Un 'Event' dans l'app est caractérisé par une nom obligatoire avec une data ou une fonction pour la gérer quand elle est survient.
 
 
+### Model
+**Gere les appels AJAX et les données.**
 
-### Model	: Gere les appels AJAX et les données.
-Apres éxec d'une requete AJAX retoure une Promise, manipulable par les autres Model. Gere directement le msg d'erreur en cas de fail de la requete.
-Ne peut communiquer avec les autres couches grace aux Events.
-
-
-### Controller : Connait le model et appelable par la vue pour effectuer des actiosn des données.
-
-
-### Vue :	Responsable de ce qui est visible pour l'utilisateur.
-Charge les vues et les menus dans le Context
-Permet de notifier l'utilisateur avec un msg et un type {SUCCESS, WARNING,ERROR}
+    - Retourne une Promise, manipulable par les autres Model, après un succes de l'appel AJAX.
+    - Gestion direct du msg d'erreur en cas de fail de la requete.
+    - Communication inter-couche grâce aux Events.
 
 
+### Controller
+**Connait la couche Model et appelable par la Vue pour effectuer des actions des données du Model.**
 
-_MAIN.js :
-========
-Sert de boot pour l'app
 
-Initialise le context avec le $(.container principal), le $(.menu), url vers le serveur,....
+### Vue
 
-Definis les différents routes dans l'application avec la/les functions gérant celle-ci.
+**Responsable de ce qui est visible pour l'utilisateur.**
 
-Met en route le router pour l'ecoute sur le hash.
+    - Charge les vues et les menus dans le Context.
+    - Notification de l'utilisateur avec un msg selon un type {SUCCESS, WARNING,ERROR}.
+
+
+
+## _MAIN.js :
+
+**Sert de boot pour l'app**
+
+1. Initialise le context avec le $(.container principal), le $(.menu), URL vers le serveur,....
+2. Met en route le router pour l'ecoute sur le hash.
+3. Definit les différents routes dans l'application avec la/les functions gérant celle-ci.
 
 
 
 Base.js :
 =======
-Regroupe les petits actions communes à tous les autres fichiers js restant.
+**Regroupe les petits actions communes à tous les autres fichiers js restant.**
 
 Se base sur une structure MVC.
-J'ai définis une variable globale servant de namespace et return cette var en dernière ligne du fichier.
-
+Variable globale servant de namespace et retourne celle-ci en dernière ligne du fichier.
 
 Contient une fonction repondant à l'Event 'Erreur'
-
 
 La partie vue possède une fonction afficher(nomVue,nomaction,callback) responsable de l'affichage de la vue demandée en utilisant le Context ou via une requete AJAX sinon affiche par-défaut l'accueil.
 
 
-
-Les autres fichiers restants respectent aussi la structure MVC avec utilisation d'une variable globale servant de namespace à retur en fin de ficher.
-
+Les autres fichiers restants respectent aussi la structure MVC avec utilisation d'un nameespace à renvoyer en fin de ficher.
 
 
-License
--------
+
+# License
+
 (The MIT License)
 
 Copyright (c) 2016 A. Kad <ak@d.mail>

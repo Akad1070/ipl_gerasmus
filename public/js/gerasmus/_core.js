@@ -20,7 +20,7 @@ var Gerasmus = (function(){
 	/**
 	 * Mecanisme d'heritage d'un prototype dans une autre.
 	 *
-	 * @param {function} classParent Constructeur function de qui on herite (Animal).
+	 * @param {function}  function de qui on herite (Animal).
 	 */
 	Function.prototype.heriteDe = function (classParent) {
 		this.prototype = Object.create(classParent.prototype);
@@ -71,295 +71,6 @@ var Gerasmus = (function(){
 
 
 
-/***********************************************************************************
-		Router pour rediriger selon l'url ou windows.location
-************************************************************************************/
-
-
-	gerasmus.Route = function (pattern){
-		// Si y'as un espace au début ou fin
-		// if(pattern)	pattern = pattern.trim();
-		this._route = {
-			'pattern'	: {	'url' : pattern.trim(), 'regEx' : null },
-			'vue'		: '',
-			'action'	: ''
-			// 'params'	: []
-		};
-
-		this.convertToRegex();
-	};
-
-	gerasmus.Route.prototype = {
-		getChemin 	: function (){ 	return this._route['pattern']['url']; },
-		getRegex 	: function (){ 	return this._route['pattern']['regEx']; },
-		getNomVue	: function (){ 	return this._route['vue'];},
-		getNomAction: function (){ 	return this._route['action'];},
-		// getParams	: function (){ 	return this._route['params'];},
-		isEquals	: function (rt){ return this.getChemin()=== rt.getChemin();}	,
-
-		setVue	: function (vue){ this._route['vue'] = vue;},
-		setAction	: function (act){ this._route['action'] = act;},
-		// setParams	: function (param){ this._route['params'] = param;},
-
-		convertToRegex : function() {
-			// Je remplace dans '/mobi/:muid' le :muid par un regex
-			var reg = this.getChemin().replace(/:[^\s/]+/g, '([\\w-]+)');
-			this._route['pattern']['regEx'] = new RegExp(reg);
-			this.getChemin().replace(/\/$/, '').replace(/^\//, '');
-			var decomp = this.getChemin().split('/');
-
-			decomp.shift();
-			this.setVue(decomp.shift() || 'base');
-			this.setAction(decomp.shift() || 'index');
-		}
-	};
-
-
-
-	/**
-	 *  S'occupe du traitement aek l'URL
-	 * 	Permet de redirect et determiner
-	 * 	les vues et les actions à init.
-	 */
-	gerasmus.Router = (function (){
-		// Savoir si le navigateur support HTML5 et l'history
-		var _supHisto = (window.history && window.history.pushState);
-
-		// Les routes enregistrées sont 'private'
-		// Structure de _routes [ nomVue -> { action -> {route,vue} }]
-		var _routes = {};
-
-		var _actu	= {'vue' : 'base', 'action' : 'index'};
-
-		// Sert à faire correspondre une route vers une autre
-		// 'profil' --> /user/:uid
-		var _alias = {};
-
-		var _isRedirected = false;
-
-
-		function CheckUrl (url){	}
-
-
-		return {
-			'supportHistorik' : _supHisto,
-
-			getActionActu : function(){
-				return _actu['action'];
-			},
-
-			getVueActu : function(){
-				return _actu['vue'];
-			},
-
-			setVueActu : function (vue){
-				_actu['vue'] = vue;
-			},
-
-			setActionActu : function(action){
-				_actu['action'] = action;
-			},
-
-			ajouterRoute : function(rt,context, vue,titre) {
-				// Insertion : [ nomVue -> { action -> {'route','vue','titre'} }]
-				if(!_routes[rt.getNomVue()]){ // ?Y'as aucune Vue rajouté pour cette Route.
-					_routes[rt.getNomVue()] = {};
-					_routes[rt.getNomVue()]['_context'] = {};
-				}
-				// Rajoute le context pour cette vue si absent,
-				// Tt les actions de cette Vue partagent le meme Context
-				if(objIsEmpty(_routes[rt.getNomVue()]['_context']) && !objIsEmpty(context) ){
-					_routes[rt.getNomVue()]['_context'] = context;
-				}
-
-				var tabActionRoutes = _routes[rt.getNomVue()], nomAction = rt.getNomAction();
-				// Pas definis une route d'action pour ce type de vue
-				if(!tabActionRoutes[nomAction]){
-					tabActionRoutes[nomAction] = {};
-					tabActionRoutes[nomAction]['routes'] = [];
-					tabActionRoutes[nomAction]['routes'].push(rt);
-					tabActionRoutes[nomAction]['vue'] = vue;
-
-					// Si j'ai un titre pour cette Route, je m'en sert comme alias
-					// Ex : Une Route nommé(/quidam/connexion) nommée connexion
-					// Si 'lURL dans le browser est /connexion, alors je dois pointer vers /quidam/connexin
-					if(titre){
-						this.connect(titre,rt.getChemin());
-					}
-				}else{
-					//
-					for(var idx in tabActionRoutes[nomAction]['routes']){
-						var actionRoute = tabActionRoutes[nomAction]['routes'][idx];
-						if(!actionRoute.isEquals(rt)){
-							tabActionRoutes[nomAction]['routes'].push(rt);
-						}
-					}
-				}
-			},
-
-
-			/**
-			 *Permet de connecter un alias à un url existant (/profil,/user/:uid)
-			 */
-			connect : function (alias,to){
-				if(_alias[alias]) return ; // J'ai deja un alias
-				if(typeof to === 'string'){ // ? C'est un URL ? /deconnecter
-					//rt = new gerasmus.Route(to);
-					_alias[alias] = to;
-				}else{ // to est une Route
-					var connectTo = { 'vue' : to.getNomVue(),'act':to.getNomAction(), 'url':to.getChemin() };
-					_alias[alias] = connectTo.join('.');
-				}
-			},
-
-
-			init : function (){
-				// Au changement de l'URL dans la barre d'adresse
-				window.addEventListener("hashchange", gerasmus.Router.go, false);
-
-				window.addEventListener('popstate',gerasmus.Router.naviguer)
-
-				this.go();
-			},
-
-
-			/**
-			 * ? A koi correspond cette route ? :  A une route correspond une vue particulière.
-			 * ('/mobilite/ajouter/:idEtud', MobiliteVue)  :idEtud est le parametre
-			 * Alors j'appelerais MobiliteVue.ajouter(:idEtud)
-			 */
-			when : function(chemin,context,vue,titre){
-				var self = this;
-				// Aucun vue, donc la vue est à la place du context;
-				if(!vue){
-					vue = context;
-				}else{
-					if(typeof vue === 'string'){
-						titre = vue;
-						vue = context;
-					}
-				}
-
-				// ? Just un seul chemin ?
-				if( typeof chemin === 'string'){
-					// Je transforme en Route et je l'ajoute direct
-					return this.ajouterRoute(new gerasmus.Route(chemin),context,vue,titre);
-				}
-
-				// ? Est-ce un tableau de chemin ?
-				if(Array.isArray(chemin)){
-					// Chope chak elt et re-check Chemin
-					return chemin.forEach(function (elt){
-						console.debug('Chemin : '+elt);
-						// Je re-when le chemin
-						self.when(elt,context,vue,titre);
-					});
-				}
-
-			},
-
-
-			redirect : function(nvUrl){
-				if(nvUrl && typeof nvUrl === 'string' && _alias[nvUrl]){
-					nvUrl = _alias[nvUrl];
-				}
-				_isRedirected = true;
-				 window.location.hash =  nvUrl;
-			},
-
-
-			/**
-			 * Appeler lors du chemin de location soit par lien ou
-			 */
-			go : function (evt){
-				var urlSrc = window.location.hash;
-				if(evt && typeof evt === 'string'){
-					urlSrc = evt;
-				}
-
-				var match = urlSrc.match(/\#(.*)$/);
-		        var url = '/'; // Par-defaut, on affiche l'accueil
-
-		        if(match && match.length > 1){
-			       	url = match.pop();
-					// Nettoie l'url , enleve les / de trop :-)
-					url.replace(/\/$/, '').replace(/^\//, '');
-		        }
-
-		        if(_alias[url]){
-					url = _alias[url];
-				}
-
-				var routeUrl 	= new gerasmus.Route(url),
-					nomVue 	 	= routeUrl.getNomVue(),
-					nomAction	= routeUrl.getNomAction();
-
-				// ? Y'a une route correspondant à cet URL ?
-				if(_routes[nomVue] && _routes[nomVue][nomAction] ){
-					var route = null,params;
-					var rtChemin = _routes[nomVue][nomAction];
-
-					for (var i = rtChemin['routes'].length - 1; i >= 0; --i) {
-						var actionRoute = rtChemin['routes'][i];
-						if(actionRoute.getRegex().test(url)){
-							route = actionRoute;
-							// Je chope les params de url
-							params = actionRoute.getRegex().exec(url);
-							params.shift(); // Degage le 1er elt, l'url
-							break;
-						}
-					}
-
-					if(!route){
-						gerasmus.Router.redirect('/');
-					}
-
-					var routeFunc = null, // Pr choper la fonction à appeler
-						context = _routes[nomVue]['_context'], // Le context pour cette Vue
-						vue = rtChemin['vue'];  // La vue ou foncttion pour ce url
-
-
-					if(typeof vue === 'function'){ // Aucune Vue n'a été passé pour ce chemin,
-						routeFunc = vue;// juste une fonction et son context.
-					}else{	// Va cherche la fonction correspondande dans l'oBjet de Vue
-						// Si y'as pas dans cette, va chercher dans le ctrler de cette vue
-						routeFunc = vue[nomAction] || vue['_ctrl'][nomAction];
-					}
-
-					// Mnt, j'apelle la fonction avec les eventuelles params du chemin
-					if(routeFunc){
-						gerasmus.Router.setActionActu(nomAction);
-						gerasmus.Router.setVueActu(nomVue);
-						routeFunc.apply(context, params);
-						_isRedirected = false;
-						return true;
-					}else{ // Y'as pas de fct defnir pour gerer cette route.
-						// ? Y'as t-il un context defini ki extends Gerasmus.Vue
-						if(!objIsEmpty(context) && context['afficherVue'] ){
-							if(context['afficherVue'].call(context,nomVue,nomAction)){
-								_isRedirected = false;
-								return true; // Si j'ai pu changer la vue'
-							}
-						}
-					}
-
-				}
-
-
-
-				// Aucun route n'a été prédéfini pour ce chemin -> Go accueil
-				gerasmus.Router.redirect('/');
-				return false;
-
-			} // go()
-
-
-
-		}; // return
-
-	})();	//  IIFE pour n' avoir k'un seul Router
-
-
 
 
 
@@ -379,7 +90,7 @@ var Gerasmus = (function(){
 			'reqAJAX'		: {
 				'timeLimit'	: 1,
 				'onStart' 	: function(msg){
-					console.log('Requete AJAX LAncé – ' + msg);
+					console.log('Requete AJAX Lancé – ' + msg);
 				},
 				'onComplete': function(){
 					console.log('Requete AJAX Fini');
@@ -582,13 +293,308 @@ var Gerasmus = (function(){
 				window.clearTimeout(_internals['reqAJAX']['onWaitin']);
 				_internals['reqAJAX']['onComplete'].call({});
 			}
-
-
-
-
 		}
 
 	})();
+
+
+
+
+	/***********************************************************************************
+	 Router pour rediriger selon l'url ou windows.location
+	 ************************************************************************************/
+
+
+	gerasmus.Route = function (pattern){
+		// Si y'as un espace au début ou fin
+		// if(pattern)	pattern = pattern.trim();
+		this._route = {
+			'pattern'	: {	'url' : pattern.trim(), 'regEx' : null },
+			'vue'		: '',
+			'action'	: ''
+			// 'params'	: []
+		};
+
+		this.convertToRegex();
+	};
+
+	gerasmus.Route.prototype = {
+		getChemin 	: function (){ 	return this._route['pattern']['url']; },
+		getRegex 	: function (){ 	return this._route['pattern']['regEx']; },
+		getNomVue	: function (){ 	return this._route['vue'];},
+		getNomAction: function (){ 	return this._route['action'];},
+		// getParams	: function (){ 	return this._route['params'];},
+		isEquals	: function (rt){ return this.getChemin()=== rt.getChemin();}	,
+
+		setVue	: function (vue){ this._route['vue'] = vue;},
+		setAction	: function (act){ this._route['action'] = act;},
+		// setParams	: function (param){ this._route['params'] = param;},
+
+		convertToRegex : function() {
+			// Je remplace dans '/mobi/:muid' le :muid par un regex
+			var reg = this.getChemin().replace(/:[^\s/]+/g, '([\\w-]+)');
+			this._route['pattern']['regEx'] = new RegExp(reg);
+			this.getChemin().replace(/\/$/, '').replace(/^\//, '');
+			var decomp = this.getChemin().split('/');
+
+			decomp.shift();
+			this.setVue(decomp.shift() || 'base');
+			this.setAction(decomp.shift() || 'index');
+		}
+	};
+
+
+
+	/**
+	 *  S'occupe du traitement aek l'URL
+	 * 	Permet de redirect et determiner
+	 * 	les vues et les actions à init.
+	 */
+	gerasmus.Router = (function (){
+		// Savoir si le navigateur support HTML5 et l'history
+		var _supHisto = (window.history && window.history.pushState);
+
+		// Les routes enregistrées sont 'private'
+		// Structure de _routes [ nomVue -> { action -> {route,vue} }]
+		var _routes = {};
+
+		var _actu	= {'vue' : 'base', 'action' : 'index'};
+
+		// Sert à faire correspondre une route vers une autre
+		// 'profil' --> /user/:uid
+		var _alias = {};
+
+		var _isRedirected = false;
+
+
+		function CheckUrl (url){	}
+
+
+		return {
+			'supportHistorik' : _supHisto,
+
+			getActionActu : function(){
+				return _actu['action'];
+			},
+
+			getVueActu : function(){
+				return _actu['vue'];
+			},
+
+			setVueActu : function (vue){
+				_actu['vue'] = vue;
+			},
+
+			setActionActu : function(action){
+				_actu['action'] = action;
+			},
+
+			ajouterRoute : function(rt,context, vue,titre) {
+				// Insertion : [ nomVue -> { action -> {'route','vue','titre'} }]
+				if(!_routes[rt.getNomVue()]){ // ?Y'as aucune Vue rajouté pour cette Route.
+					_routes[rt.getNomVue()] = {};
+					_routes[rt.getNomVue()]['_context'] = {};
+				}
+				// Rajoute le context pour cette vue si absent,
+				// Tt les actions de cette Vue partagent le meme Context
+				if(objIsEmpty(_routes[rt.getNomVue()]['_context']) && !objIsEmpty(context) ){
+					_routes[rt.getNomVue()]['_context'] = context;
+				}
+
+				var tabActionRoutes = _routes[rt.getNomVue()], nomAction = rt.getNomAction();
+				// Pas definis une route d'action pour ce type de vue
+				if(!tabActionRoutes[nomAction]){
+					tabActionRoutes[nomAction] = {};
+					tabActionRoutes[nomAction]['routes'] = [];
+					tabActionRoutes[nomAction]['routes'].push(rt);
+					tabActionRoutes[nomAction]['vue'] = vue;
+
+					// Si j'ai un titre pour cette Route, je m'en sert comme alias
+					// Ex : Une Route nommé(/quidam/connexion) nommée connexion
+					// Si 'lURL dans le browser est /connexion, alors je dois pointer vers /quidam/connexin
+					if(titre){
+						this.connect(titre,rt.getChemin());
+					}
+				}else{
+					//
+					for(var idx in tabActionRoutes[nomAction]['routes']){
+						var actionRoute = tabActionRoutes[nomAction]['routes'][idx];
+						if(!actionRoute.isEquals(rt)){
+							tabActionRoutes[nomAction]['routes'].push(rt);
+						}
+					}
+				}
+			},
+
+
+			/**
+			 *Permet de connecter un alias à un url existant (/profil,/user/:uid)
+			 */
+			connect : function (alias,to){
+				if(_alias[alias]) return ; // J'ai deja un alias
+				if(typeof to === 'string'){ // ? C'est un URL ? /deconnecter
+					//rt = new gerasmus.Route(to);
+					_alias[alias] = to;
+				}else{ // to est une Route
+					var connectTo = { 'vue' : to.getNomVue(),'act':to.getNomAction(), 'url':to.getChemin() };
+					_alias[alias] = connectTo.join('.');
+				}
+			},
+
+
+			init : function (){
+				// Au changement de l'URL dans la barre d'adresse
+				window.addEventListener("hashchange", gerasmus.Router.go, false);
+
+				window.addEventListener('popstate',gerasmus.Router.naviguer)
+
+				this.go();
+			},
+
+
+			/**
+			 * ? A koi correspond cette route ? :  A une route correspond une vue particulière.
+			 * ('/mobilite/ajouter/:idEtud', MobiliteVue)  :idEtud est le parametre
+			 * Alors j'appelerais MobiliteVue.ajouter(:idEtud)
+			 */
+			when : function(chemin,context,vue,titre){
+				var self = this;
+				// Aucun vue, donc la vue est à la place du context;
+				if(!vue){
+					vue = context;
+				}else{
+					if(typeof vue === 'string'){
+						titre = vue;
+						vue = context;
+					}
+				}
+
+				// ? Just un seul chemin ?
+				if( typeof chemin === 'string'){
+					// Je transforme en Route et je l'ajoute direct
+					return this.ajouterRoute(new gerasmus.Route(chemin),context,vue,titre);
+				}
+
+				// ? Est-ce un tableau de chemin ?
+				if(Array.isArray(chemin)){
+					// Chope chak elt et re-check Chemin
+					return chemin.forEach(function (elt){
+						console.debug('Chemin : '+elt);
+						// Je re-when le chemin
+						self.when(elt,context,vue,titre);
+					});
+				}
+
+			},
+
+
+			redirect : function(nvUrl){
+				if(nvUrl && typeof nvUrl === 'string' && _alias[nvUrl]){
+					nvUrl = _alias[nvUrl];
+				}
+				_isRedirected = true;
+				window.location.hash =  nvUrl;
+			},
+
+
+			/**
+			 * Appeler lors du chemin de location soit par lien ou
+			 */
+			go : function (evt){
+				var urlSrc = window.location.hash;
+				if(evt && typeof evt === 'string'){
+					urlSrc = evt;
+				}
+
+				var match = urlSrc.match(/\#(.*)$/);
+				var url = '/'; // Par-defaut, on affiche l'accueil
+
+				if(match && match.length > 1){
+					url = match.pop();
+					// Nettoie l'url , enleve les / de trop :-)
+					url.replace(/\/$/, '').replace(/^\//, '');
+				}
+
+				if(_alias[url]){
+					url = _alias[url];
+				}
+
+				var routeUrl 	= new gerasmus.Route(url),
+					nomVue 	 	= routeUrl.getNomVue(),
+					nomAction	= routeUrl.getNomAction();
+
+				// ? Y'a une route correspondant à cet URL ?
+				if(_routes[nomVue] && _routes[nomVue][nomAction] ){
+					var route = null,params;
+					var rtChemin = _routes[nomVue][nomAction];
+
+					for (var i = rtChemin['routes'].length - 1; i >= 0; --i) {
+						var actionRoute = rtChemin['routes'][i];
+						if(actionRoute.getRegex().test(url)){
+							route = actionRoute;
+							// Je chope les params de url
+							params = actionRoute.getRegex().exec(url);
+							params.shift(); // Degage le 1er elt, l'url
+							break;
+						}
+					}
+
+					if(!route){
+						gerasmus.Router.redirect('/');
+					}
+
+					var routeFunc = null, // Pr choper la fonction à appeler
+						context = _routes[nomVue]['_context'], // Le context pour cette Vue
+						vue = rtChemin['vue'];  // La vue ou foncttion pour ce url
+
+
+					if(typeof vue === 'function'){ // Aucune Vue n'a été passé pour ce chemin,
+						routeFunc = vue;// juste une fonction et son context.
+					}else{	// Va cherche la fonction correspondande dans l'oBjet de Vue
+						// Si y'as pas dans cette, va chercher dans le ctrler de cette vue
+						routeFunc = vue[nomAction] || vue['_ctrl'][nomAction];
+					}
+
+					// Mnt, j'apelle la fonction avec les eventuelles params du chemin
+					if(routeFunc){
+						gerasmus.Router.setActionActu(nomAction);
+						gerasmus.Router.setVueActu(nomVue);
+						routeFunc.apply(context, params);
+						_isRedirected = false;
+						return true;
+					}else{ // Y'as pas de fct defini pour gerer cette route.
+						// ? Y'as t-il un context defini ki extends Gerasmus.Vue
+						if(!objIsEmpty(context) && context['afficherVue'] ){
+							if(context['afficherVue'].call(context,nomVue,nomAction)){
+								_isRedirected = false;
+								return true; // Si j'ai pu changer la vue'
+							}
+						}
+					}
+
+				}
+
+
+
+				// Aucun route n'a été prédéfini pour ce chemin -> Go accueil
+				gerasmus.Router.redirect('/');
+				return false;
+
+			} // go()
+
+
+
+		}; // return
+
+	})();	//  IIFE pour n' avoir k'un seul Router
+
+
+
+
+
+
+
+
 
 
 
