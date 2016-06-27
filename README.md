@@ -66,7 +66,7 @@ Je vais présenter les principaux composants de ce 'mini-framework'.
 
 ### Events
 
-Pour gerer la communication entre les couches. Basée sur le pattern PubSub
+**Gestion de la communication inter-couche. Basée sur le pattern PubSub.**
 
 Un 'Event' dans l'app est caractérisé par une nom obligatoire avec une data ou une fonction pour la gérer quand elle est survient.
 
