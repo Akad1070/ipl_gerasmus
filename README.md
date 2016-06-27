@@ -1,58 +1,58 @@
-AppServlet
-===========
+# Explication sur AppServlet
+
 
 Le chemin (URL) vers l'API est  ...:8080/api/gerasmus/v1
 
-L'AppServlet ne répond que 2 types de methodes {GET, POST}.La methode GET renvoie, après verification de l'authentification, les vues HTML pour le front-end.
+L'AppServlet ne répond qu'a 2 type de requête {GET, POST}.
+
+La methode GET renvoie, après verification de l'authentification, les vues HTML pour le front-end.
+
 La methode POST sert à obtenir et modifier des données en rapport avec l'application.
 
-Le body de la requete de type POST doit toujours contenir {vue,action ,input_data}.
-Ceci n'est pas requis pour une requete de type POST avec un paramètre 'req'.
-
-Ex:
----
-Pour connecter un utilisateur, voici le format du body
-    {
-    "vue":"quidam",
-    "action":"connexion",
-    "input_data":"{\"identifiant\":\"donatien.grolaux@vinci.be\",\"mdp\":\"MdpAdmin123\"}"
-    }
-
-ou Lister les mobiltés en tant que professeur
-    {
-    "vue":"mobilite",
-    "action":"list",
-    "input_data":"{}"
-    }
-
-Les actions de type "maj" requiert de specifier le type de maj à effectuer dans le 'input_data' du body.
-
-
+Le body de la requete de type POST doit toujours contenir {vue,action ,input_data} non-requis avec un paramètre 'req'.
 
 La methode POST peut aussi prendre un paramètre 'req' pour obtenir des données non-relatives à une vue particulière telle que
 les différents departements, la liste des types d'organisations possibles pour un partenaire, liste des pays disponibles,
 verifier si l'user courrant est bien authifié.
+
+## Ex:
+
+Voici le format du body de la requête pour Connecter un utilisateur
+```js
+{
+    "vue":"quidam",
+    "action":"connexion",
+    "input_data":"{\"identifiant\":\"prenom.nom@vinci.be\",\"mdp\":\"MdpAdmin123\"}"
+}
+```
+ou Lister les mobiltés en tant que professeur
+```js
+{
+    "vue":"mobilite",
+    "action":"list",
+    "input_data":"{}"
+}
+```
+
+Les actions de type "maj" requiert les nouveles data dans le 'input_data'.
 
 
 
 JavaScript
 ==========
 
-J'avais pour idée de créer un petit 'framework' MVC pour etablir une base sur laquelle chacun pourrait contribuer au JS au lieu de laisser une seule personne en charge de cette partie.
-En fin de compte, ca ne s'est pas passée ainsi car personne dans le groupe n'avait réussi l'examen JS et avait des lacunes pour la compréhension du JS.
-
-Je vais présenter les principaux composants de ce 'framework'.
+Je vais présenter les principaux composants de ce 'mini-framework'.
 
 
 _CORE.js :
 ---------
-Regroupe les fonctionnalités du framework. Representer par le namespace 'Gerasmus'
+Regroupe les fonctionnalités du framework. Representé par le namespace 'Gerasmus'
 
 ### Router : Un syteme de router simple avec pris en charge de paramètre.
-Utilise une reconnaissance par RegExp.
-Ecoutant les chagements du #hash dans la barre d'adresse.
-Permet la redirection vers un route ne particulier.
-Permet de mettre un alias pour un chemin : #inscription dirige vers #/quidam/inscription
+    - Reconnaissance par RegExp de l'URL.
+    - Ecoute les changements du #hash dans la barre d'adresse.
+    - Redirection vers un route ne particulier.
+    - Assignation d'alias pour un chemin : #inscription dirige vers #/quidam/inscription
 
 
 ### Context :
@@ -61,11 +61,8 @@ Pour retenir toutes les vues visibles actuellement par l'utilisateur, les diffé
 
 
 ### Events : Pour gerer la communication entre les couches. Basée sur le pattern PubSub
-J'avais commencé avec le pattern Observer mais j'avais constamment besoin de connaitre les listenners pour pouvoir ajouter.
-Et ca ne permettait pas de transmettre la reponse la partie en charge des Mobilités quand on se trouvait dans les Partenaires.
-Par exemple, pour dire mettre a jour liste des partenaires disponibles pour une Mobilité après avoir ajouté un nouveau partenaire.
 
-Un event dans l'app est caractérisée par une nom obligatoire avec une data ou une fonction pour la gérer quand elle est survient.
+Un 'Event' dans l'app est caractérisé par une nom obligatoire avec une data ou une fonction pour la gérer quand elle est survient.
 
 
 
@@ -112,3 +109,28 @@ La partie vue possède une fonction afficher(nomVue,nomaction,callback) responsa
 
 Les autres fichiers restants respectent aussi la structure MVC avec utilisation d'une variable globale servant de namespace à retur en fin de ficher.
 
+
+
+License
+-------
+(The MIT License)
+
+Copyright (c) 2016 A. Kad <ak@d.mail>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
